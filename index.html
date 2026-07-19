@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drive7 Blocks - دراسة تأسيس خدمة غسيل السيارات السريع</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+          },
+          colors: {
+            'drive-bg': '#fdfbf7',
+            'drive-text': '#33302b',
+            'drive-primary': '#c15f3c',
+            'drive-primary-hover': '#9c4a2e',
+            'drive-secondary': '#a39a8e',
+            'drive-border': '#eadfd2',
+            'drive-box-bg': '#faf6f0',
+            'drive-dark': '#262421',
+            'drive-green': '#3e7a5e',
+            'drive-red': '#b0483a',
+            'drive-red-bg': '#fbeee9',
+            'drive-green-bg': '#f0f4ef',
+            'drive-tag-bg': '#f6ece2',
+            'drive-tag-text': '#8a5a3f',
+            'drive-bar-bg': '#8a8378',
+            'drive-light-text': '#d8d2c8',
+            'drive-dash-border': '#c9beac',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #efe9df;
+      color: #33302b;
+    }
+    a {
+      color: #c15f3c;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #9c4a2e;
+      text-decoration: underline;
+    }
+    /* Add a subtle shadow to the main container for better presentation on large screens */
+    .main-container {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+  </style>
+</head>
+<body class="antialiased flex items-center justify-center min-h-screen p-4 sm:p-8">
+
+  <div class="main-container bg-drive-bg w-full max-w-4xl rounded-2xl overflow-hidden mx-auto">
+    
+    <!-- Footer/Header strip -->
+    <div class="flex justify-between items-center py-3 px-4 sm:px-8 text-xs text-drive-secondary border-b border-drive-border bg-drive-bg">
+      <span class="font-semibold text-drive-primary">Drive7 · Blocks</span>
+      <span>دراسة تأسيس خدمة غسيل السيارات السريع</span>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="p-5 sm:p-10 md:p-16">
+
+      <!-- Title Section -->
+      <div class="pb-8 border-b-4 border-drive-primary">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-3 h-3 rounded-sm bg-drive-primary inline-block"></span>
+          <span class="text-sm font-semibold tracking-wide text-drive-primary uppercase">DRIVE7</span>
+          <span class="text-xs text-drive-secondary">دراسة داخلية — للقراءة والمناقشة</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-[40px] leading-tight font-bold text-drive-dark mb-4">دراسة تأسيس خدمة غسيل السيارات السريع في Drive7</h1>
+        <p class="text-base sm:text-lg leading-relaxed text-[#6e675d] m-0 max-w-[60ch]">خدمة داعمة ومكمّلة للنشاط الأساسي، بتموضع «غسيل خارجي سريع دون خدوش»، ونموذج تشغيلي قائم على مسار منظم حول الفرع — تحت الاسم التجريبي <b class="text-drive-primary font-bold">Blocks</b>.</p>
+        <div class="flex flex-wrap gap-4 sm:gap-8 mt-8 text-sm text-drive-secondary">
+          <span>النسخة: مسودة الدراسة الكاملة</span>
+          <span>النطاق: الفروع الجديدة</span>
+          <span>الحالة: قيد الدراسة</span>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="mt-8 mb-4 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl">
+        <div class="text-sm font-bold text-drive-primary mb-4">محتويات الدراسة</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm leading-loose text-[#5c564d]">
+          <div>1 · مقدمة</div>
+          <div>2 · الهدف الاستراتيجي من الخدمة</div>
+          <div>3 · التموضع المقترح للخدمة</div>
+          <div>4 · سبب التركيز على الغسيل الخارجي</div>
+          <div>5 · النموذج التشغيلي المقترح</div>
+          <div>6 · مفهوم الغسيل دون خدوش</div>
+          <div>7 · موازنة المراحل التشغيلية</div>
+          <div>8 · تجربة العميل المقترحة</div>
+          <div>9 · الهوية المؤقتة للخدمة</div>
+          <div>10 · التحديات الرئيسية</div>
+          <div>11 · نظام المناشف المقترح</div>
+          <div>12 · الأدوات والمعدات المطلوبة</div>
+          <div>13 · تصميم سير العمل</div>
+          <div>14 · ملاحظات من التجربة الحالية</div>
+          <div>15 · نموذج الحوافز للعاملين</div>
+          <div>16 · التسويق المقترح للخدمة</div>
+          <div>17 · المتطلبات الإدارية والتأسيسية</div>
+          <div>18 · خطة العمل قبل الإطلاق</div>
+          <div>19 · مؤشرات الأداء المقترحة</div>
+          <div>20 · الخلاصة + الملخص التنفيذي</div>
+        </div>
+      </div>
+
+      <!-- 1 مقدمة -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">1 · </span>مقدمة</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">تدرس Drive7 إضافة خدمة غسيل السيارات إلى بعض الفروع الجديدة، بوصفها خدمة داعمة ومكملة للنشاط الأساسي للشركة، وليست مجرد خدمة غسيل مستقلة.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">تأتي هذه الفكرة نتيجة لطبيعة خدمات Drive7 الحالية، إذ إن كثيرًا من خدمات الشركة، مثل العازل الحراري، وأفلام حماية الطلاء، وطلاء السيراميك، تُنفذ غالبًا مرة واحدة خلال فترة امتلاك العميل للسيارة. وبناءً على ذلك، لا يعود العميل عادةً إلى الفرع إلا عند شراء سيارة جديدة بعد سنوات، مما يقلل من معدل تكرار زيارة العملاء للفروع.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لذلك تهدف خدمة الغسيل إلى خلق سبب متكرر لزيارة العميل، وتعزيز فرص تعريفه بخدمات Drive7، وبيع منتجات إضافية مرتبطة بالعناية بالسيارة، مع تقديم خدمة سريعة وعملية تناسب احتياج شريحة واسعة من العملاء.</p>
+      
+      <figure class="my-6 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl">
+        <div class="flex flex-col lg:flex-row items-center gap-4">
+          <div class="flex-1 w-full text-center p-4 bg-drive-bg border border-drive-border rounded-xl">
+            <div class="text-xs text-drive-secondary mb-2">الوضع الحالي</div>
+            <div class="text-sm font-semibold text-[#3d3a35] leading-relaxed">خدمات تُنفذ مرة واحدة<br>عازل · حماية · سيراميك</div>
+          </div>
+          <div class="text-2xl text-drive-primary hidden lg:block rotate-180">→</div>
+          <div class="text-2xl text-drive-primary lg:hidden rotate-90 my-2">→</div>
+          <div class="flex-1 w-full text-center p-4 bg-drive-bg border border-drive-border rounded-xl">
+            <div class="text-xs text-drive-secondary mb-2">النتيجة</div>
+            <div class="text-sm font-semibold text-[#3d3a35] leading-relaxed">عودة العميل بعد سنوات<br>عند شراء سيارة جديدة</div>
+          </div>
+          <div class="text-2xl text-drive-primary hidden lg:block rotate-180">→</div>
+          <div class="text-2xl text-drive-primary lg:hidden rotate-90 my-2">→</div>
+          <div class="flex-1 w-full text-center p-4 bg-drive-primary rounded-xl">
+            <div class="text-xs text-[#f3d5c8] mb-2">الحل المقترح</div>
+            <div class="text-sm font-semibold text-white leading-relaxed">خدمة غسيل متكررة<br>سبب دائم لزيارة الفرع</div>
+          </div>
+        </div>
+        <figcaption class="mt-4 text-xs text-drive-secondary text-center">شكل 1 — لماذا تحتاج Drive7 إلى خدمة متكررة؟</figcaption>
+      </figure>
+
+      <!-- 2 الهدف الاستراتيجي -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">2 · </span>الهدف الاستراتيجي من الخدمة</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لا يقتصر الهدف من إضافة خدمة الغسيل على تحقيق إيراد مباشر من الغسيل نفسه، بل توجد عدة أهداف استراتيجية وتشغيلية مرتبطة بها، من أهمها:</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+        <div class="p-5 bg-drive-box-bg border border-drive-border rounded-xl">
+            <div class="text-xl font-bold text-drive-primary mb-2">٢٫١</div>
+            <div class="text-base font-bold text-drive-dark mb-1">زيادة معدل عودة العملاء</div>
+            <div class="text-sm leading-relaxed text-[#6e675d]">مدخل متكرر لعودة العميل إلى الفرع</div>
+        </div>
+        <div class="p-5 bg-drive-box-bg border border-drive-border rounded-xl">
+            <div class="text-xl font-bold text-drive-primary mb-2">٢٫٢</div>
+            <div class="text-base font-bold text-drive-dark mb-1">تعريف العملاء بخدمات Drive7</div>
+            <div class="text-sm leading-relaxed text-[#6e675d]">تصحيح التصورات وتجربة أقرب للحياة اليومية</div>
+        </div>
+        <div class="p-5 bg-drive-box-bg border border-drive-border rounded-xl">
+            <div class="text-xl font-bold text-drive-primary mb-2">٢٫٣</div>
+            <div class="text-base font-bold text-drive-dark mb-1">بيع منتجات العناية بالسيارة</div>
+            <div class="text-sm leading-relaxed text-[#6e675d]">منتجات متكررة الاستخدام أثناء الزيارة</div>
+        </div>
+        <div class="p-5 bg-drive-box-bg border border-drive-border rounded-xl">
+            <div class="text-xl font-bold text-drive-primary mb-2">٢٫٤</div>
+            <div class="text-base font-bold text-drive-dark mb-1">دعم تكاليف الفرع</div>
+            <div class="text-sm leading-relaxed text-[#6e675d]">تغطية جزء جيد من التكاليف التشغيلية</div>
+        </div>
+      </div>
+
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">2.1 زيادة معدل عودة العملاء إلى الفروع</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">بما أن خدمات Drive7 الأساسية لا تتكرر كثيرًا للسيارة نفسها، فإن خدمة الغسيل يمكن أن تكون مدخلًا لعودة العميل بشكل متكرر إلى الفرع، مما يزيد فرص التواصل معه وتعريفه بالخدمات والمنتجات الأخرى.</p>
+      
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">2.2 تعريف العملاء بخدمات Drive7</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">بعض العملاء لديهم تصور غير دقيق عن Drive7، فقد يظنون أن الشركة تقدم فقط العازل الحراري أو أفلام الحماية أو السيراميك، ولا يعرفون أن من ضمن خدماتها التلميع والعناية بالمظهر الخارجي للسيارة.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">كما أن بعض العملاء يعتقدون أن أسعار Drive7 مرتفعة دون معرفة تفصيلية بالخدمات أو مستويات الجودة. لذلك يمكن أن تكون خدمة الغسيل وسيلة عملية لتعريف العميل بالشركة وتجربتها بطريقة أقل تكلفة وأقرب للتجربة اليومية.</p>
+      
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">2.3 بيع منتجات مرتبطة بالعناية بالسيارة</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-3">يمكن استثمار زيارة العميل لخدمة الغسيل في عرض وبيع منتجات تحتاجها السيارة بشكل متكرر، مثل:</p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-medium">معطرات السيارات</span>
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-medium">أجهزة نفخ الإطارات</span>
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-medium">مسّاحات الزجاج</span>
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-medium">فلاتر الهواء</span>
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-medium">منتجات العناية السريعة</span>
+      </div>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">وهذه المنتجات تناسب طبيعة العميل الموجود داخل فرع Drive7، خصوصًا إذا كانت السيارة من الفئة المستهدفة لخدمات الشركة الأساسية.</p>
+      
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">2.4 دعم تكاليف الفرع</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">من الممكن أن تسهم خدمة الغسيل في تغطية جزء جيد من تكاليف الفرع، خصوصًا إذا صُممت بطريقة تشغيلية سريعة ومنخفضة التكلفة، مع وجود حجم عملاء مناسب.</p>
+
+      <!-- 3 التموضع -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">3 · </span>التموضع المقترح للخدمة</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">يجب ألا يتم تقديم الخدمة بوصفها خدمة غسيل تقليدية، بل يجب أن يكون لها تموضع واضح ومميز. التموضع المقترح هو:</p>
+      
+      <div class="my-6 p-6 sm:p-8 text-center bg-drive-dark rounded-2xl">
+        <div class="text-sm text-[#c9a08c] tracking-widest mb-3 uppercase">التموضع</div>
+        <div class="text-2xl sm:text-3xl font-bold text-[#fdfbf7]">غسيل خارجي سريع دون خدوش</div>
+      </div>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-3">يقوم هذا التموضع على ثلاث ركائز رئيسية:</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-5">
+        <div class="p-5 bg-drive-box-bg border-t-4 border-drive-primary rounded-b-xl shadow-sm">
+            <div class="text-base font-bold text-drive-dark mb-2">السرعة</div>
+            <div class="text-sm leading-relaxed text-[#6e675d]">خدمة مناسبة للعميل المشغول الذي يريد إنجاز الغسيل في وقت قصير</div>
+        </div>
+        <div class="p-5 bg-drive-box-bg border-t-4 border-drive-primary rounded-b-xl shadow-sm">
+            <div class="text-base font-bold text-drive-dark mb-2">السلامة على الطلاء</div>
+            <div class="text-sm leading-relaxed text-[#6e675d]">تقليل احتمالية حدوث الخدوش أثناء الغسيل</div>
+        </div>
+        <div class="p-5 bg-drive-box-bg border-t-4 border-drive-primary rounded-b-xl shadow-sm">
+            <div class="text-base font-bold text-drive-dark mb-2">الكفاءة التشغيلية</div>
+            <div class="text-sm leading-relaxed text-[#6e675d]">تقليل التكلفة وخدمة عدد كبير من السيارات</div>
+        </div>
+      </div>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">ولا تستهدف الخدمة العميل الذي يبحث عن غسيل تفصيلي عميق أو تنظيف داخلي احترافي طويل المدة، بل تستهدف العميل الذي يريد غسيلًا خارجيًا سريعًا ومنظمًا وآمنًا على السيارة.</p>
+
+      <!-- 4 الغسيل الخارجي -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">4 · </span>سبب التركيز على الغسيل الخارجي فقط</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">بناءً على الدراسة الأولية، فإن الغسيل الخارجي أسرع بكثير من الغسيل الداخلي والخارجي معًا. فالخدمة الخارجية لا تحتاج إلى فتح الأبواب أو استخدام المكانس الكهربائية أو تنظيف المقصورة الداخلية أو التعامل مع الأغراض الشخصية داخل السيارة. وهذا يجعلها أكثر مناسبة لفكرة المسار السريع.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">كما أن تكلفة الغسيل الخارجي أقل بكثير من تكلفة الغسيل الكامل. وبحسب التقدير الأولي، فإن تكلفة الغسيل الخارجي قد تمثل قرابة 30% من تكلفة الغسيل الداخلي والخارجي معًا.</p>
+      
+      <figure class="my-6 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl">
+        <div class="text-sm font-bold text-drive-dark mb-4">مقارنة تقديرية للتكلفة لكل سيارة</div>
+        <div class="flex flex-col gap-4">
+          <div>
+            <div class="flex justify-between text-sm text-[#5c564d] mb-2">
+                <span>غسيل داخلي + خارجي</span>
+                <span class="font-bold">100%</span>
+            </div>
+            <div class="h-4 bg-drive-border rounded-full w-full overflow-hidden direction-ltr">
+                <div class="h-full w-full bg-drive-bar-bg rounded-full"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm text-[#5c564d] mb-2">
+                <span>غسيل خارجي فقط</span>
+                <span class="font-bold text-drive-primary">≈ 30%</span>
+            </div>
+            <div class="h-4 bg-drive-border rounded-full w-full overflow-hidden direction-ltr" dir="ltr">
+                <div class="h-full w-[30%] bg-drive-primary rounded-full float-right"></div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="mt-4 text-xs text-drive-secondary text-right">شكل 2 — التكلفة التقديرية للغسيل الخارجي مقابل الغسيل الكامل</figcaption>
+      </figure>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-3">لذلك فإن التركيز على الغسيل الخارجي يساعد على تحقيق الأهداف التالية:</p>
+      <ul class="list-disc list-inside mb-4 pr-5 text-base leading-relaxed text-[#3d3a35] space-y-1">
+        <li>تقليل مدة الخدمة.</li>
+        <li>تقليل عدد العمال المطلوبين.</li>
+        <li>تقليل التعقيد التشغيلي.</li>
+        <li>زيادة عدد السيارات التي يمكن خدمتها يوميًا.</li>
+        <li>تقليل التكلفة التشغيلية.</li>
+        <li>المحافظة على انسيابية المسار.</li>
+      </ul>
+
+      <!-- 5 النموذج التشغيلي -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">5 · </span>النموذج التشغيلي المقترح</h2>
+      
+      <h3 class="text-lg font-bold text-drive-dark mt-6 mb-3">5.1 فكرة المسار</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">يقوم النموذج التشغيلي على إنشاء مسار حول مبنى Drive7 داخل الارتدادات المحيطة بالفرع. تدخل السيارة من بداية المسار، ثم تتحرك حول المبنى مرورًا بمراحل الغسيل، ثم تخرج من الجهة الأخرى بعد انتهاء الخدمة.</p>
+      
+      <figure class="my-6 p-5 sm:p-8 bg-drive-box-bg border border-drive-border rounded-xl relative overflow-hidden">
+        <div class="relative h-64 sm:h-80 w-full max-w-lg mx-auto">
+          <!-- Track outline -->
+          <div class="absolute inset-4 sm:inset-8 border-2 border-dashed border-drive-primary rounded-3xl opacity-50"></div>
+          
+          <!-- Building -->
+          <div class="absolute top-[25%] right-[25%] bottom-[25%] left-[25%] bg-drive-dark rounded-xl flex items-center justify-center shadow-lg z-10">
+              <span class="text-white text-sm sm:text-base font-bold">مبنى الفرع</span>
+          </div>
+          
+          <!-- Entrance -->
+          <div class="absolute top-0 right-8 sm:right-16 bg-drive-primary text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-md z-20">
+              دخول السيارة ↓
+          </div>
+          
+          <!-- Exit -->
+          <div class="absolute bottom-0 left-8 sm:left-16 bg-drive-green text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-md z-20">
+              ↑ خروج السيارة
+          </div>
+          
+          <!-- Steps -->
+          <div class="absolute top-2 right-1/4 translate-x-1/2 bg-drive-bg border border-drive-border px-2 py-1 rounded-lg text-[10px] sm:text-xs text-[#5c564d] font-semibold whitespace-nowrap z-20 shadow-sm">
+              1 · غسيل آلي بالماء والصابون
+          </div>
+          
+          <div class="absolute top-1/2 -translate-y-1/2 left-0 bg-drive-bg border border-drive-border px-2 py-1 rounded-lg text-[10px] sm:text-xs text-[#5c564d] font-semibold whitespace-nowrap z-20 shadow-sm">
+              2 · تجفيف بالهواء
+          </div>
+          
+          <div class="absolute bottom-2 right-1/4 translate-x-1/2 bg-drive-bg border border-drive-border px-2 py-1 rounded-lg text-[10px] sm:text-xs text-[#5c564d] font-semibold whitespace-nowrap z-20 shadow-sm">
+              3 · مسح يدوي + عرض المنتجات
+          </div>
+          
+          <!-- Direction Arrow -->
+          <div class="absolute top-1/2 -translate-y-1/2 right-0 bg-drive-bg border border-drive-border px-2 py-1 rounded-lg text-[10px] sm:text-xs text-drive-primary font-semibold whitespace-nowrap z-20 shadow-sm">
+              اتجاه الحركة ↓
+          </div>
+        </div>
+        <figcaption class="mt-4 text-xs text-drive-secondary text-center">شكل 3 — مسار الغسيل يلتف حول مبنى الفرع داخل الارتدادات المحيطة</figcaption>
+      </figure>
+
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">هذا النموذج يجعل الخدمة أشبه بمسار سريع ومنظم، بدلًا من أن تكون خدمة عشوائية تعتمد على توقف السيارة في مكان واحد لفترة غير محددة.</p>
+      
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">5.2 مراحل الخدمة</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">تقسم عملية الغسيل إلى مرحلتين أساسيتين:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-5">
+        <div class="p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl">
+          <div class="flex items-center gap-3 mb-3">
+              <span class="w-7 h-7 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shadow-sm">1</span>
+              <span class="text-lg font-bold text-drive-dark">المرحلة الآلية</span>
+          </div>
+          <p class="text-sm leading-relaxed text-[#5c564d] m-0">رش الماء والصابون والمواد المنظفة باستخدام أجهزة مخصصة، لإزالة الأتربة والأوساخ قبل لمس سطح السيارة. هذه المرحلة مهمة جدًا؛ لأن الخدوش غالبًا تحدث عندما تُمسح السيارة وهي لا تزال تحمل أتربة أو شوائب على سطح الطلاء.</p>
+        </div>
+        <div class="p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl">
+          <div class="flex items-center gap-3 mb-3">
+              <span class="w-7 h-7 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shadow-sm">2</span>
+              <span class="text-lg font-bold text-drive-dark">المرحلة اليدوية</span>
+          </div>
+          <p class="text-sm leading-relaxed text-[#5c564d] m-0">بعد انتهاء المرحلة الآلية، تأتي مرحلة المسح والتجفيف باستخدام مناشف نظيفة ومناسبة للسيارات. يجب أن تكون سريعة ومنظمة؛ فالهدف ليس غسيلًا تفصيليًا طويلًا، بل إنهاء السيارة بكفاءة مع جودة مقبولة ودون خدوش.</p>
+        </div>
+      </div>
+
+      <!-- 6 دون خدوش -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">6 · </span>مفهوم الغسيل دون خدوش</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لتحقيق وعد الخدمة الأساسي، وهو الغسيل دون خدوش، يجب أن تبنى العملية على مبدأ واضح:</p>
+      
+      <div class="my-5 p-5 bg-drive-tag-bg border-r-4 border-drive-primary rounded-lg text-lg font-bold text-drive-primary-hover shadow-sm">
+        لا يتم لمس السيارة قبل إزالة الأتربة والأوساخ عنها جيدًا.
+      </div>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">فالخدوش لا تنتج غالبًا من الماء أو الصابون، بل من احتكاك الأتربة بجسم السيارة أثناء المسح. لذلك يجب أن تكون مرحلة الغسيل الآلي قوية وفعالة بما يكفي لإزالة الأوساخ قبل استخدام المناشف.</p>
+      
+      <figure class="my-6 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl overflow-x-auto">
+        <div class="flex items-center gap-3 min-w-max justify-start md:justify-center py-2">
+          <span class="px-4 py-2.5 bg-drive-bg border border-drive-border rounded-lg text-sm font-semibold text-[#5c564d] whitespace-nowrap shadow-sm">سيارة عليها أتربة</span>
+          <span class="text-drive-primary text-xl rotate-180">→</span>
+          <span class="px-4 py-2.5 bg-drive-bg border border-drive-border rounded-lg text-sm font-semibold text-[#5c564d] whitespace-nowrap shadow-sm">غسيل آلي قوي (ماء + صابون)</span>
+          <span class="text-drive-primary text-xl rotate-180">→</span>
+          <span class="px-4 py-2.5 bg-drive-bg border border-drive-border rounded-lg text-sm font-semibold text-[#5c564d] whitespace-nowrap shadow-sm">سطح خالٍ من الشوائب</span>
+          <span class="text-drive-primary text-xl rotate-180">→</span>
+          <span class="px-4 py-2.5 bg-drive-green rounded-lg text-sm font-semibold text-white whitespace-nowrap shadow-sm">مسح آمن دون خدوش ✓</span>
+        </div>
+        <figcaption class="mt-4 text-xs text-drive-secondary text-center">شكل 4 — تسلسل «دون خدوش»: الإزالة قبل اللمس</figcaption>
+      </figure>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-3">ويجب دعم هذا المفهوم من خلال:</p>
+      <ul class="list-disc list-inside mb-4 pr-5 text-base leading-relaxed text-[#3d3a35] space-y-1">
+        <li>استخدام مواد تنظيف فعالة في إذابة الأوساخ.</li>
+        <li>استخدام ضغط ماء مناسب.</li>
+        <li>منع المسح اليدوي قبل مرحلة الغسيل الأولي.</li>
+        <li>استخدام مناشف نظيفة ومخصصة لكل سيارة.</li>
+        <li>تدريب العمال على طريقة المسح الصحيحة.</li>
+        <li>منع إعادة استخدام المناشف المتسخة مباشرة على سيارة أخرى.</li>
+      </ul>
+
+      <!-- 7 موازنة المراحل -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">7 · </span>موازنة المراحل التشغيلية</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">من أهم عوامل نجاح الخدمة أن تكون مراحل المسار متوازنة من حيث الوقت. إذا كانت إحدى المراحل أطول بكثير من غيرها، فسوف تتوقف السيارات في المسار، وتتأخر السيارات التي خلفها، وتفقد الخدمة ميزتها الأساسية وهي السرعة.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">على سبيل المثال، إذا كانت الخدمة تتكون من ثلاث مراحل: الغسيل بالماء والصابون، ثم التجفيف بالهواء، ثم المسح والتجفيف بالمناشف — فيجب أن تكون مدة هذه المراحل متقاربة، مثل 3 دقائق لكل مرحلة، أو 5 دقائق لكل مرحلة.</p>
+      
+      <figure class="my-6 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl">
+        <div class="text-sm font-bold text-drive-green mb-3">✓ مسار متوازن — السيارات تتحرك بانسيابية</div>
+        <div class="flex flex-col sm:flex-row gap-2 mb-6">
+          <div class="flex-1 p-3 bg-drive-green rounded-lg text-center text-white text-sm font-semibold shadow-sm">غسيل · 3 د</div>
+          <div class="flex-1 p-3 bg-drive-green rounded-lg text-center text-white text-sm font-semibold shadow-sm">تجفيف هواء · 3 د</div>
+          <div class="flex-1 p-3 bg-drive-green rounded-lg text-center text-white text-sm font-semibold shadow-sm">مسح بالمناشف · 3 د</div>
+        </div>
+        
+        <div class="text-sm font-bold text-drive-red mb-3">✗ مسار غير متوازن — اختناق وتوقف للسيارات</div>
+        <div class="flex flex-col sm:flex-row gap-2">
+          <div class="flex-1 p-3 bg-[#d8cfc2] rounded-lg text-center text-[#5c564d] text-sm font-semibold shadow-sm">غسيل · 3 د</div>
+          <div class="flex-[2.6] p-3 bg-drive-red rounded-lg text-center text-white text-sm font-semibold shadow-sm animate-pulse">تجفيف · 8 د ← نقطة اختناق</div>
+          <div class="flex-1 p-3 bg-[#d8cfc2] rounded-lg text-center text-[#5c564d] text-sm font-semibold shadow-sm">مسح · 3 د</div>
+        </div>
+        <figcaption class="mt-4 text-xs text-drive-secondary text-center">شكل 5 — أثر توازن أزمنة المراحل على انسيابية المسار</figcaption>
+      </figure>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">أو يمكن تصميم نموذج مختلف، بحيث تكون مرحلة الغسيل أطول، ثم مرحلة التجفيف أقصر، ثم تُستغل فترة انتظار محسوبة في عرض المنتجات على العميل دون تعطيل المسار.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">المهم أن تتم دراسة الزمن التشغيلي لكل مرحلة بدقة، حتى لا يتحول المسار إلى نقطة اختناق.</p>
+
+      <!-- 8 تجربة العميل -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">8 · </span>تجربة العميل المقترحة</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">يجب أن تكون تجربة العميل بسيطة وسريعة وواضحة من لحظة دخوله إلى المسار حتى خروجه. تمر تجربة العميل المقترحة بالمراحل التالية:</p>
+      
+      <figure class="my-6 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl">
+        <div class="flex flex-col gap-0">
+          <div class="flex gap-4 items-start">
+            <div class="flex flex-col items-center">
+                <span class="w-7 h-7 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">1</span>
+                <span class="w-0.5 h-6 bg-drive-border my-1"></span>
+            </div>
+            <div class="text-sm sm:text-base text-[#3d3a35] pt-1">دخول العميل إلى المسار.</div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="flex flex-col items-center">
+                <span class="w-7 h-7 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">2</span>
+                <span class="w-0.5 h-6 bg-drive-border my-1"></span>
+            </div>
+            <div class="text-sm sm:text-base text-[#3d3a35] pt-1">توجيهه إلى نقطة الوقوف الصحيحة أسفل جهاز الغسيل.</div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="flex flex-col items-center">
+                <span class="w-7 h-7 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">3</span>
+                <span class="w-0.5 h-6 bg-drive-border my-1"></span>
+            </div>
+            <div class="text-sm sm:text-base text-[#3d3a35] pt-1">تنفيذ الغسيل الآلي بالماء والصابون والمواد المنظفة.</div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="flex flex-col items-center">
+                <span class="w-7 h-7 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">4</span>
+                <span class="w-0.5 h-6 bg-drive-border my-1"></span>
+            </div>
+            <div class="text-sm sm:text-base text-[#3d3a35] pt-1">الانتقال إلى مرحلة التجفيف بالهواء.</div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="flex flex-col items-center">
+                <span class="w-7 h-7 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">5</span>
+                <span class="w-0.5 h-6 bg-drive-border my-1"></span>
+            </div>
+            <div class="text-sm sm:text-base text-[#3d3a35] pt-1">المسح النهائي بمناشف نظيفة.</div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="flex flex-col items-center">
+                <span class="w-7 h-7 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">6</span>
+                <span class="w-0.5 h-6 bg-drive-border my-1"></span>
+            </div>
+            <div class="text-sm sm:text-base text-[#3d3a35] pt-1">عرض سريع للمنتجات المناسبة.</div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="w-7 h-7 rounded-full bg-drive-green text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">7</span>
+            <div class="text-sm sm:text-base text-[#3d3a35] pt-1 font-semibold">خروج العميل من المسار دون تأخير.</div>
+          </div>
+        </div>
+        <figcaption class="mt-4 text-xs text-drive-secondary text-center">شكل 6 — رحلة العميل من الدخول حتى الخروج</figcaption>
+      </figure>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">ويجب ألا يحتاج العميل إلى النزول من السيارة إلا في حالات محددة ومدروسة؛ لأن النزول المتكرر أو فتح الأبواب قد يعطل فكرة الخدمة السريعة.</p>
+
+      <!-- 9 الهوية المؤقتة -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">9 · </span>الهوية المؤقتة للخدمة</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">تم اختيار اسم Blocks للخدمة في المرحلة التجريبية، بهدف فصل تجربة الغسيل الجديدة عن سمعة Drive7 الأساسية إلى حين اكتمال النموذج التشغيلي.</p>
+      
+      <figure class="my-6 p-5 sm:p-8 bg-drive-box-bg border border-drive-border rounded-xl">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+          <div class="p-6 bg-drive-dark rounded-xl text-center shadow-lg w-full md:w-auto min-w-[200px]">
+              <div class="text-2xl font-bold text-[#fdfbf7]">Drive7</div>
+              <div class="text-xs text-[#c9a08c] mt-2">السمعة الأساسية محمية</div>
+          </div>
+          
+          <div class="flex flex-col items-center text-center">
+              <div class="hidden md:block w-16 border-t-2 border-dashed border-[#c9beac]"></div>
+              <div class="text-xs text-drive-secondary px-2 py-2 md:py-0 md:bg-drive-box-bg md:-mt-2 z-10">فصل مؤقت أثناء التجربة</div>
+              <div class="md:hidden h-8 border-r-2 border-dashed border-[#c9beac]"></div>
+          </div>
+          
+          <div class="p-6 bg-drive-primary rounded-xl text-center shadow-lg w-full md:w-auto min-w-[200px]">
+              <div class="text-2xl font-bold text-white">Blocks</div>
+              <div class="text-xs text-[#f3d5c8] mt-2">اسم تجريبي للخدمة الجديدة</div>
+          </div>
+        </div>
+        <figcaption class="mt-6 text-xs text-drive-secondary text-center">شكل 7 — فصل الهوية التجريبية عن العلامة الأم لحماية السمعة</figcaption>
+      </figure>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">هذا الفصل مهم لأن الخدمة لا تزال في مرحلة اختبار وتطوير. وفي حال حدوث أخطاء تشغيلية أو ضعف في الأداء خلال البداية، فقد يؤثر ذلك على انطباع العملاء عن Drive7 إذا كانت الخدمة تحمل اسم الشركة مباشرة.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لذلك يساعد استخدام اسم مستقل في حماية سمعة Drive7، إلى أن يتم التأكد من جودة التجربة واستقرار التشغيل.</p>
+
+      <!-- 10 التحديات -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">10 · </span>التحديات الرئيسية</h2>
+
+      <h3 class="text-lg font-bold text-drive-dark mt-6 mb-3">10.1 عرض المنتجات دون تعطيل المسار</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-3">أحد أهداف الخدمة هو بيع المنتجات وتعريف العميل بخدمات Drive7. لكن التحدي هو أن العميل يبقى داخل مسار سريع، وأي توقف طويل قد يعطل السيارات التي خلفه. لذلك يجب تصميم طريقة عرض مختصرة وسريعة، مثل:</p>
+      <ul class="list-disc list-inside mb-5 pr-5 text-base leading-relaxed text-[#3d3a35] space-y-1">
+        <li>عرض المنتجات في نقطة محددة بعد انتهاء الغسيل.</li>
+        <li>وجود موظف مخصص للشرح السريع.</li>
+        <li>استخدام لوحات أسعار واضحة.</li>
+        <li>استخدام رمز QR لعرض تفاصيل الخدمات.</li>
+        <li>تحويل العميل المهتم إلى موقف جانبي بدلًا من إيقاف المسار.</li>
+      </ul>
+      
+      <figure class="my-6 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl overflow-x-auto">
+        <div class="flex items-center gap-3 min-w-max justify-start md:justify-center py-2">
+          <span class="px-4 py-2.5 bg-drive-bg border border-drive-border rounded-lg text-sm font-semibold text-[#5c564d] whitespace-nowrap shadow-sm">انتهاء الغسيل</span>
+          <span class="text-drive-primary text-xl rotate-180">→</span>
+          <span class="px-4 py-2.5 bg-drive-bg border border-drive-border rounded-lg text-sm font-semibold text-[#5c564d] whitespace-nowrap shadow-sm">نقطة عرض سريعة (موظف + لوحة + QR)</span>
+          <span class="text-drive-primary text-xl rotate-180">→</span>
+          <div class="flex flex-col gap-2">
+            <span class="px-4 py-2 bg-drive-green rounded-lg text-sm font-semibold text-white whitespace-nowrap shadow-sm">غير مهتم ← خروج مباشر</span>
+            <span class="px-4 py-2 bg-drive-primary rounded-lg text-sm font-semibold text-white whitespace-nowrap shadow-sm">مهتم ← موقف جانبي للشرح</span>
+          </div>
+        </div>
+        <figcaption class="mt-4 text-xs text-drive-secondary text-center">شكل 8 — تفريع العميل المهتم خارج المسار بدل إيقافه</figcaption>
+      </figure>
+
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">10.2 رفع قيمة الخدمة مع بقاء الغسيل خارجيًا فقط</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-3">بما أن الخدمة تقتصر على الغسيل الخارجي، فقد يكون من الصعب رفع السعر إذا قارنها العميل بخدمات الغسيل التقليدية. لكن يمكن تبرير السعر من خلال:</p>
+      <ul class="list-disc list-inside mb-5 pr-5 text-base leading-relaxed text-[#3d3a35] space-y-1">
+        <li>جودة المواد المستخدمة.</li>
+        <li>سرعة الخدمة.</li>
+        <li>تقليل احتمالية الخدوش.</li>
+        <li>استخدام مناشف نظيفة ومخصصة لكل سيارة.</li>
+        <li>وضوح التجربة وتنظيمها.</li>
+        <li>ارتباط الخدمة باسم قريب من Drive7 وجودة العناية بالسيارات.</li>
+      </ul>
+
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">10.3 استهداف الشريحة المناسبة</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">قد تجذب خدمة الغسيل عملاء لا يمثلون الشريحة المستهدفة لخدمات Drive7 الأساسية. وهذا قد يضعف الهدف الاستراتيجي من الخدمة.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لذلك يجب أن يركز التسويق على العملاء المناسبين، خصوصًا أصحاب السيارات الأعلى قيمة، والعملاء القريبين من الفروع، والعملاء المحتمل اهتمامهم بخدمات العازل، والحماية، والسيراميك، والتلميع.</p>
+
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">10.4 السيارات شديدة الاتساخ</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">بعض السيارات قد تصل وهي متسخة جدًا، مما يجعل المسار السريع غير كافٍ للتعامل معها بنفس الوقت المخصص للسيارات العادية.</p>
+      <div class="mb-5 p-4 bg-drive-green-bg border-r-4 border-drive-green rounded-lg text-sm leading-relaxed text-[#3d3a35] shadow-sm">
+        <b class="text-drive-green text-base block mb-1">الحل المقترح:</b> وجود مرحلة إضافية اختيارية، يتم تشغيلها فقط عند الحاجة، لمعالجة السيارة شديدة الاتساخ قبل دخولها إلى المسار الأساسي أو في بدايته.
+      </div>
+
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">10.5 الأوساخ داخل حواف الأبواب</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-3">الغسيل الخارجي قد لا يعالج الأوساخ الموجودة داخل حواف الأبواب، وهي مناطق تظهر عند فتح الباب. لذلك يجب تحديد سياسة واضحة لهذه النقطة:</p>
+      <ul class="list-disc list-inside mb-4 pr-5 text-base leading-relaxed text-[#3d3a35] space-y-1">
+        <li>إما أن تكون خارج نطاق الخدمة.</li>
+        <li>أو تقدم كخدمة إضافية.</li>
+        <li>أو تعالج في نقطة جانبية منفصلة دون تعطيل المسار.</li>
+      </ul>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">المهم ألا تكون هذه النقطة سببًا في اختلاف توقعات العميل عن الخدمة الفعلية.</p>
+
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">10.6 التجفيف بالهواء</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">من التجارب الحالية ظهر أن التجفيف بالهواء قد يستغرق وقتًا أطول من المتوقع، كما قد يستمر الماء في النزول من بعض أجزاء السيارة بعد انتهاء المرحلة. لذلك يجب دراسة:</p>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d]">نوع أجهزة التجفيف</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d]">قوة الهواء</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d]">زوايا توجيه الهواء</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d]">مدة التجفيف المناسبة</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d]">دمج التجفيف الهوائي مع اليدوي</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d]">تأثير تصميم السيارة على بقاء الماء</span>
+      </div>
+
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">10.7 التعامل مع مخلفات العميل داخل السيارة</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">قد يرغب بعض العملاء في إخراج أوساخ أو مخلفات من داخل السيارة أثناء الغسيل، رغم أن الخدمة خارجية فقط.</p>
+      <div class="mb-5 p-4 bg-drive-green-bg border-r-4 border-drive-green rounded-lg text-sm leading-relaxed text-[#3d3a35] shadow-sm">
+        <b class="text-drive-green text-base block mb-1">الحل المقترح:</b> وضع حل لا يعطل المسار، مثل توفير حاوية واضحة في نقطة محددة، أو منع هذا الإجراء داخل المسار، أو تخصيص نقطة جانبية لمن يحتاج إلى ذلك.
+      </div>
+
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">10.8 السيارات ذات الحرارة العالية</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">عند دخول سيارة شديدة السخونة، قد يجف الصابون بسرعة على سطح السيارة، مما قد يؤدي إلى التصاقه أو ترك آثار على الطلاء. لذلك يجب وضع إجراء خاص للسيارات الساخنة، مثل:</p>
+      
+      <figure class="my-6 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="p-3 sm:p-4 bg-drive-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] leading-relaxed shadow-sm">
+              <b class="text-drive-primary">1 ·</b> شطف أولي بالماء لتبريد السطح
+          </div>
+          <div class="p-3 sm:p-4 bg-drive-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] leading-relaxed shadow-sm">
+              <b class="text-drive-primary">2 ·</b> استخدام مواد مناسبة للحرارة
+          </div>
+          <div class="p-3 sm:p-4 bg-drive-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] leading-relaxed shadow-sm">
+              <b class="text-drive-primary">3 ·</b> تقليل مدة بقاء الصابون على السيارة
+          </div>
+          <div class="p-3 sm:p-4 bg-drive-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] leading-relaxed shadow-sm">
+              <b class="text-drive-primary">4 ·</b> تعديل تسلسل العملية في الأيام الحارة
+          </div>
+        </div>
+        <figcaption class="mt-4 text-xs text-drive-secondary text-center">شكل 9 — بروتوكول السيارات الساخنة</figcaption>
+      </figure>
+
+      <!-- 11 المناشف -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">11 · </span>نظام المناشف المقترح</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">من العناصر المهمة لتحقيق وعد «غسيل دون خدوش» أن يشعر العميل بأن الأدوات المستخدمة على سيارته نظيفة وآمنة.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لذلك يُقترح استخدام مناشف نظيفة ومغلفة لكل سيارة، بحيث يرى العميل العامل وهو يفتح الكيس أمامه، فيطمئن أن المنشفة لم تُستخدم مباشرة على سيارة أخرى.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">يتطلب هذا النظام وجود دورة تشغيل كاملة تشمل:</p>
+      
+      <figure class="my-6 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl">
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          <span class="px-3 py-2 bg-drive-bg border border-drive-border rounded-lg text-xs font-semibold text-[#5c564d] shadow-sm">جمع المستخدمة</span>
+          <span class="text-drive-primary rotate-180">→</span>
+          <span class="px-3 py-2 bg-drive-bg border border-drive-border rounded-lg text-xs font-semibold text-[#5c564d] shadow-sm">حاويات مخصصة</span>
+          <span class="text-drive-primary rotate-180">→</span>
+          <span class="px-3 py-2 bg-drive-bg border border-drive-border rounded-lg text-xs font-semibold text-[#5c564d] shadow-sm">غسيل</span>
+          <span class="text-drive-primary rotate-180">→</span>
+          <span class="px-3 py-2 bg-drive-bg border border-drive-border rounded-lg text-xs font-semibold text-[#5c564d] shadow-sm">تجفيف سريع</span>
+          <span class="text-drive-primary rotate-180">→</span>
+          <span class="px-3 py-2 bg-drive-bg border border-drive-border rounded-lg text-xs font-semibold text-[#5c564d] shadow-sm">طي وتجهيز</span>
+          <span class="text-drive-primary rotate-180">→</span>
+          <span class="px-3 py-2 bg-drive-bg border border-drive-border rounded-lg text-xs font-semibold text-[#5c564d] shadow-sm">تغليف</span>
+          <span class="text-drive-primary rotate-180">→</span>
+          <span class="px-3 py-2 bg-drive-primary rounded-lg text-xs font-semibold text-white shadow-sm">نقطة الاستخدام</span>
+        </div>
+        <div class="text-center mt-4 text-xs text-drive-secondary font-medium">⟲ دورة مغلقة تتكرر طوال اليوم — المنشفة تُفتح مغلفة أمام العميل</div>
+        <figcaption class="mt-3 text-xs text-drive-secondary text-center">شكل 10 — دورة تشغيل المناشف من الاستخدام إلى التغليف</figcaption>
+      </figure>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">ويجب دراسة عدد المناشف المطلوب يوميًا، وحجم الغسالات والمجففات، وعدد العمال المسؤولين عن هذه العملية، وطريقة منع اختلاط المناشف النظيفة بالمستخدمة.</p>
+
+      <!-- 12 الأدوات -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">12 · </span>الأدوات والمعدات المطلوبة</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">تحتاج الخدمة إلى دراسة دقيقة للأدوات والمعدات، ومنها:</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-5">
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">أجهزة رش الماء والصابون</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">مواد تنظيف عالية الجودة وسريعة التأثير</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">أجهزة تجفيف هواء قوية ومناسبة</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">مناشف كبيرة مخصصة لتجفيف السيارات</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">غسالات سريعة للمناشف</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">مجففات سريعة</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">نظام تغليف للمناشف النظيفة</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">حاويات للمناشف المستخدمة</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">حاويات للمخلفات</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">أدوات للوصول إلى سقف السيارة بسرعة وأمان</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">لوحات إرشادية لتوجيه العميل داخل المسار</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm">إشارات ضوئية أو أرضية لتحديد مكان التوقف بدقة</div>
+        <div class="p-3 sm:p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm sm:col-span-2 font-medium text-center">نظام عرض سريع للمنتجات والخدمات</div>
+      </div>
+
+      <!-- 13 سير العمل -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">13 · </span>تصميم سير العمل</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">يجب تصميم سير العمل، أو الـ Workflow، قبل بدء التشغيل، بحيث يحدد كل تفصيلة في المسار. يجب أن يجيب التصميم التشغيلي عن الأسئلة التالية:</p>
+      
+      <div class="my-6 p-6 sm:p-8 bg-drive-box-bg border border-drive-border rounded-xl shadow-sm">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm leading-relaxed text-[#3d3a35] list-disc list-inside marker:text-drive-primary">
+          <li>أين يقف كل عامل؟</li>
+          <li>كم عدد العمال المطلوبين في كل مرحلة؟</li>
+          <li>ما دور كل عامل؟</li>
+          <li>كيف يتم الانتقال من مرحلة إلى أخرى؟</li>
+          <li>كيف يتم مسح سقف السيارة بسرعة؟</li>
+          <li>كيف يعمل العمال كفريق واحد؟</li>
+          <li>ماذا يحدث إذا غاب أحد العمال؟</li>
+          <li>ماذا يحدث إذا تعطلت إحدى المراحل؟</li>
+          <li>ماذا يحدث إذا توقف العميل للسؤال؟</li>
+          <li>ماذا يحدث إذا طلب العميل منتجًا إضافيًا؟</li>
+          <li>كيف تُخرج السيارة إذا احتاج العميل شرحًا أطول؟</li>
+          <li>كيف نحافظ على السرعة دون التضحية بالجودة؟</li>
+        </ul>
+      </div>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">هذه الأسئلة يجب ألا تترك للاجتهاد اليومي، بل يجب تحويلها إلى إجراءات تشغيلية مكتوبة وواضحة.</p>
+
+      <!-- 14 ملاحظات -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">14 · </span>ملاحظات من التجربة الحالية</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">من خلال تجربة نظام الغسيل القائم حاليًا، ظهرت عدة ملاحظات يجب الاستفادة منها قبل تطوير النموذج الجديد.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4"><b class="font-bold text-drive-dark">أولًا،</b> كمية الصابون المستخدمة كانت خفيفة، وقد لا تكون كافية لتحقيق فكرة إزالة الأوساخ قبل لمس السيارة.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4"><b class="font-bold text-drive-dark">ثانيًا،</b> كان توجيه السيارة إلى مكان الوقوف غير واضح، حيث يطلب العامل من العميل التقدم والرجوع أكثر من مرة حتى يتم ضبط موقع السيارة تحت الجهاز. وهذا لا يتناسب مع فكرة الخدمة السريعة.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لذلك يجب وجود نظام إرشاد واضح وسهل، يساعد العميل على الوقوف في الموقع الصحيح من المحاولة الأولى، مثل:</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 my-5">
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-center text-sm font-semibold text-[#3d3a35] shadow-sm flex items-center justify-center min-h-[80px]">إشارات أرضية</div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-center text-sm font-semibold text-[#3d3a35] shadow-sm flex items-center justify-center min-h-[80px]">أضواء توجيه</div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-center text-sm font-semibold text-[#3d3a35] shadow-sm flex items-center justify-center min-h-[80px]">علامات توقف واضحة</div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-center text-sm font-semibold text-[#3d3a35] shadow-sm flex items-center justify-center min-h-[80px]">شاشة أو لوحة توضّح متى يتوقف</div>
+      </div>
+
+      <!-- 15 الحوافز -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">15 · </span>نموذج الحوافز للعاملين</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">يمكن أن يساعد نظام الحوافز في رفع جودة الأداء وسرعة التنفيذ، إذا صُمم بطريقة صحيحة. يُقترح ألا يعتمد دخل العامل على الراتب فقط، بل يضاف إليه نظام عمولات أو حوافز مرتبطة بالأداء، مثل:</p>
+      
+      <figure class="my-6 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 mb-8">
+          <div class="w-full md:w-auto p-4 bg-drive-dark rounded-xl text-white text-base font-bold text-center shadow-md">راتب ثابت</div>
+          <div class="text-2xl text-drive-primary font-bold hidden md:block">+</div>
+          <div class="w-full md:w-auto p-4 bg-drive-primary rounded-xl text-white text-base font-bold text-center shadow-md">حوافز مرتبطة بالأداء</div>
+          <div class="text-2xl text-[#5c564d] font-bold hidden md:block">=</div>
+          <div class="text-2xl text-drive-primary font-bold md:hidden my-1">↓</div>
+          <div class="w-full md:w-auto p-4 bg-drive-green rounded-xl text-white text-base font-bold text-center shadow-md">دخل العامل</div>
+        </div>
+        
+        <div class="flex flex-wrap gap-2 justify-center">
+          <span class="px-3 py-1.5 bg-drive-bg border border-drive-border rounded-full text-xs font-medium text-[#5c564d]">سرعة إنجاز الخدمة</span>
+          <span class="px-3 py-1.5 bg-drive-bg border border-drive-border rounded-full text-xs font-medium text-[#5c564d]">جودة الغسيل</span>
+          <span class="px-3 py-1.5 bg-drive-bg border border-drive-border rounded-full text-xs font-medium text-[#5c564d]">عدم وجود شكاوى</span>
+          <span class="px-3 py-1.5 bg-drive-bg border border-drive-border rounded-full text-xs font-medium text-[#5c564d]">رضا العميل</span>
+          <span class="px-3 py-1.5 bg-drive-bg border border-drive-border rounded-full text-xs font-medium text-[#5c564d]">بيع المنتجات المناسبة</span>
+          <span class="px-3 py-1.5 bg-drive-bg border border-drive-border rounded-full text-xs font-medium text-[#5c564d]">الالتزام بالإجراءات</span>
+        </div>
+        <figcaption class="mt-5 text-xs text-drive-secondary text-center">شكل 11 — معادلة الدخل ومحددات الحوافز</figcaption>
+      </figure>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">وفي المقابل، يمكن أن تتأثر الحوافز عند وجود شكاوى متكررة أو عودة العميل بسبب خطأ في الخدمة.</p>
+      
+      <div class="mb-5 p-4 bg-drive-red-bg border-r-4 border-drive-red rounded-lg text-sm leading-relaxed text-[#3d3a35] shadow-sm">
+        <b class="text-drive-red text-base block mb-1">تنبيه:</b> يجب الحذر من أن يؤدي نظام الحوافز إلى استعجال العمال على حساب الجودة، أو دفعهم لبيع منتجات غير مناسبة للعميل. لذلك يجب أن تكون الحوافز مرتبطة بالسرعة والجودة معًا، وليس بالسرعة فقط.
+      </div>
+
+      <!-- 16 التسويق -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">16 · </span>التسويق المقترح للخدمة</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لأن خدمة الغسيل تعتمد غالبًا على العملاء القريبين من الموقع، فإن التسويق المحلي حول الفرع سيكون مهمًا.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">من الأفكار المقترحة توزيع قسائم غسيل مجانية أو مخفضة داخل الحي، مع استهداف السيارات المناسبة لشريحة Drive7، خصوصًا السيارات ذات القيمة الأعلى. ويمكن وضع رقم لوحة السيارة على القسيمة، حتى لا تُستخدم من سيارات أخرى خارج الشريحة المستهدفة.</p>
+      
+      <figure class="my-6 p-5 sm:p-6 bg-drive-box-bg border border-drive-border rounded-xl overflow-x-auto">
+        <div class="flex items-center gap-3 min-w-max justify-start md:justify-center py-2">
+          <span class="px-4 py-2.5 bg-drive-bg border border-drive-border rounded-lg text-sm font-semibold text-[#5c564d] whitespace-nowrap shadow-sm">قسيمة موجهة برقم اللوحة</span>
+          <span class="text-drive-primary text-xl rotate-180">→</span>
+          <span class="px-4 py-2.5 bg-drive-bg border border-drive-border rounded-lg text-sm font-semibold text-[#5c564d] whitespace-nowrap shadow-sm">زيارة العميل المناسب للفرع</span>
+          <span class="text-drive-primary text-xl rotate-180">→</span>
+          <span class="px-4 py-2.5 bg-drive-bg border border-drive-border rounded-lg text-sm font-semibold text-[#5c564d] whitespace-nowrap shadow-sm">تجربة الخدمة</span>
+          <span class="text-drive-primary text-xl rotate-180">→</span>
+          <span class="px-4 py-2.5 bg-drive-primary rounded-lg text-sm font-semibold text-white whitespace-nowrap shadow-sm">عرض خدمات ومنتجات Drive7</span>
+        </div>
+        <figcaption class="mt-4 text-xs text-drive-secondary text-center">شكل 12 — القسيمة أداة استقطاب للشريحة المستهدفة، لا مجرد غسيل مجاني</figcaption>
+      </figure>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">الهدف من هذه القسائم ليس تقديم غسيل مجاني فقط، بل جذب العميل المناسب إلى الفرع، وتعريفه بتجربة الخدمة، ثم فتح فرصة لعرض منتجات وخدمات Drive7 عليه.</p>
+
+      <!-- 17 المتطلبات الإدارية -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">17 · </span>المتطلبات الإدارية والتأسيسية</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">نجاح المشروع لا يعتمد فقط على شراء الأجهزة أو توفير العمالة، بل يعتمد بالدرجة الأولى على تأسيس نموذج تشغيلي صحيح.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لذلك يُقترح تعيين شخص مسؤول عن تأسيس المشروع، بشرط أن يكون لديه فهم جيد لتصميم العمليات، وليس مجرد خبرة تشغيلية تقليدية. يفضل أن يكون لديه معرفة أو خبرة في:</p>
+      
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-semibold shadow-sm">تصميم العمليات</span>
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-semibold shadow-sm">تحسين الإجراءات</span>
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-semibold shadow-sm">Six Sigma</span>
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-semibold shadow-sm">Lean</span>
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-semibold shadow-sm">قياس الأداء</span>
+        <span class="px-4 py-2 bg-drive-tag-bg border border-drive-border rounded-full text-sm text-drive-tag-text font-semibold shadow-sm">بناء إجراءات قابلة للتكرار</span>
+      </div>
+      
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">كما يمكن الاستعانة بمستشار خارجي لفترة محددة، تكون مهمته تصميم الإجراءات التشغيلية كاملة، واختبار المسار، ووضع مؤشرات الأداء، وتدريب الفريق.</p>
+
+      <!-- 18 خطة العمل -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">18 · </span>خطة العمل المقترحة قبل الإطلاق</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">قبل إطلاق الخدمة بشكل كامل، يُقترح تنفيذ الخطوات التالية:</p>
+      
+      <figure class="my-6 p-5 sm:p-8 bg-drive-box-bg border border-drive-border rounded-xl">
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-2 items-center sm:items-stretch justify-between">
+          <div class="flex-1 text-center w-full sm:w-auto">
+              <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shadow-md">1</div>
+              <div class="text-xs sm:text-[11px] md:text-xs font-semibold text-[#3d3a35] leading-snug max-w-[80px] mx-auto">دراسة السوق والمنافسين</div>
+          </div>
+          <div class="hidden sm:flex items-center text-drive-dash-border">—</div>
+          <div class="sm:hidden w-1 h-4 border-r-2 border-dashed border-drive-dash-border"></div>
+          
+          <div class="flex-1 text-center w-full sm:w-auto">
+              <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shadow-md">2</div>
+              <div class="text-xs sm:text-[11px] md:text-xs font-semibold text-[#3d3a35] leading-snug max-w-[80px] mx-auto">البحث عن الحلول التشغيلية</div>
+          </div>
+          <div class="hidden sm:flex items-center text-drive-dash-border">—</div>
+          <div class="sm:hidden w-1 h-4 border-r-2 border-dashed border-drive-dash-border"></div>
+          
+          <div class="flex-1 text-center w-full sm:w-auto">
+              <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shadow-md">3</div>
+              <div class="text-xs sm:text-[11px] md:text-xs font-semibold text-[#3d3a35] leading-snug max-w-[80px] mx-auto">تصميم المسار التشغيلي</div>
+          </div>
+          <div class="hidden sm:flex items-center text-drive-dash-border">—</div>
+          <div class="sm:hidden w-1 h-4 border-r-2 border-dashed border-drive-dash-border"></div>
+          
+          <div class="flex-1 text-center w-full sm:w-auto">
+              <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shadow-md">4</div>
+              <div class="text-xs sm:text-[11px] md:text-xs font-semibold text-[#3d3a35] leading-snug max-w-[80px] mx-auto">اختبار النموذج</div>
+          </div>
+          <div class="hidden sm:flex items-center text-drive-dash-border">—</div>
+          <div class="sm:hidden w-1 h-4 border-r-2 border-dashed border-drive-dash-border"></div>
+          
+          <div class="flex-1 text-center w-full sm:w-auto">
+              <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-drive-primary text-white flex items-center justify-center text-sm font-bold shadow-md">5</div>
+              <div class="text-xs sm:text-[11px] md:text-xs font-semibold text-[#3d3a35] leading-snug max-w-[80px] mx-auto">تطوير الإجراءات</div>
+          </div>
+          <div class="hidden sm:flex items-center text-drive-dash-border">—</div>
+          <div class="sm:hidden w-1 h-4 border-r-2 border-dashed border-drive-dash-border"></div>
+          
+          <div class="flex-1 text-center w-full sm:w-auto">
+              <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-drive-green text-white flex items-center justify-center text-sm font-bold shadow-md ring-2 ring-drive-green ring-offset-2 ring-offset-drive-box-bg">6</div>
+              <div class="text-xs sm:text-[11px] md:text-xs font-semibold text-[#3d3a35] leading-snug max-w-[80px] mx-auto">إطلاق تجريبي محدود</div>
+          </div>
+        </div>
+        <figcaption class="mt-6 text-xs text-drive-secondary text-center">شكل 13 — خارطة الطريق قبل الإطلاق</figcaption>
+      </figure>
+
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">18.1 دراسة السوق والمنافسين</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">يجب دراسة خدمات الغسيل السريع محليًا وعالميًا، ومعرفة النماذج التي نجحت في تقديم خدمة سريعة وآمنة على السيارة.</p>
+      
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">18.2 البحث عن أفضل الحلول التشغيلية</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-3">يجب البحث عن حلول الشركات المتخصصة في:</p>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d] shadow-sm">الغسيل السريع</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d] shadow-sm">التجفيف بالهواء</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d] shadow-sm">منع الخدوش</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d] shadow-sm">أنظمة المناشف</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d] shadow-sm">مسارات الغسيل</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d] shadow-sm">إدارة حركة السيارات</span>
+        <span class="px-4 py-2 bg-drive-box-bg border border-drive-border rounded-full text-sm text-[#5c564d] shadow-sm">عرض المنتجات أثناء الخدمة</span>
+      </div>
+      
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">18.3 تصميم المسار التشغيلي</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">يجب رسم المسار كاملًا من لحظة دخول السيارة حتى خروجها، مع تحديد المراحل، والأزمنة، ومواقع العمال، ونقاط التوقف، ونقاط عرض المنتجات.</p>
+      
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">18.4 اختبار النموذج</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-3">ينبغي اختبار الخدمة على عدد محدود من السيارات قبل الإطلاق، وقياس:</p>
+      <ul class="list-disc list-inside mb-4 pr-5 text-base leading-relaxed text-[#3d3a35] space-y-1">
+        <li>مدة الخدمة.</li>
+        <li>جودة الغسيل.</li>
+        <li>كفاءة التجفيف.</li>
+        <li>رضا العميل.</li>
+        <li>عدد العمال المطلوبين.</li>
+        <li>تكلفة المواد.</li>
+        <li>احتمالية تعطل المسار.</li>
+        <li>قدرة الفريق على عرض المنتجات دون تأخير.</li>
+      </ul>
+      
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">18.5 تطوير الإجراءات</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">بعد الاختبار، تُعدّل الإجراءات بناءً على الملاحظات الفعلية، ثم تُوثّق في دليل تشغيل واضح.</p>
+      
+      <h3 class="text-lg font-bold text-drive-dark mt-8 mb-3">18.6 إطلاق تجريبي محدود</h3>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">يُفضل أن يبدأ المشروع بإطلاق تجريبي محدود تحت اسم Blocks، إلى أن يثبت النموذج كفاءته واستقراره، ثم يُتخذ القرار بشأن ربطه بشكل أقوى باسم Drive7.</p>
+
+      <!-- 19 مؤشرات الأداء -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">19 · </span>مؤشرات الأداء المقترحة</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لضمان نجاح الخدمة، يجب قياس الأداء من البداية، ومن أهم المؤشرات المقترحة:</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 my-6">
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3">
+            <span class="text-xl text-drive-primary w-6 text-center">⏱</span> 
+            <span class="font-medium">متوسط مدة الخدمة لكل سيارة</span>
+        </div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3">
+            <span class="text-xl text-drive-primary w-6 text-center">Σ</span> 
+            <span class="font-medium">عدد السيارات المغسولة يوميًا</span>
+        </div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3">
+            <span class="text-xl text-drive-primary w-6 text-center">﷼</span> 
+            <span class="font-medium">تكلفة المواد لكل سيارة</span>
+        </div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3">
+            <span class="text-xl text-drive-primary w-6 text-center">%</span> 
+            <span class="font-medium">نسبة العملاء المشترين لمنتج إضافي</span>
+        </div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3">
+            <span class="text-xl text-drive-primary w-6 text-center">%</span> 
+            <span class="font-medium">نسبة المهتمين بخدمات Drive7 الأساسية</span>
+        </div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3">
+            <span class="text-xl text-drive-primary w-6 text-center">!</span> 
+            <span class="font-medium">عدد الشكاوى</span>
+        </div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3">
+            <span class="text-xl text-drive-primary w-6 text-center">↺</span> 
+            <span class="font-medium">حالات إعادة الغسيل أو التصحيح</span>
+        </div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3">
+            <span class="text-xl text-drive-primary w-6 text-center">☺</span> 
+            <span class="font-medium">رضا العملاء</span>
+        </div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3">
+            <span class="text-xl text-drive-primary w-6 text-center">✓</span> 
+            <span class="font-medium">التزام العمال بالإجراءات</span>
+        </div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3">
+            <span class="text-xl text-drive-primary w-6 text-center">▮</span> 
+            <span class="font-medium">نسبة توقف المسار أو تأخره</span>
+        </div>
+        <div class="p-4 bg-drive-box-bg border border-drive-border rounded-xl text-sm text-[#3d3a35] shadow-sm flex items-center gap-3 sm:col-span-2 lg:col-span-1 lg:col-start-2">
+            <span class="text-xl text-drive-primary w-6 text-center">Ø</span> 
+            <span class="font-medium text-center w-full">متوسط الإيراد لكل سيارة</span>
+        </div>
+      </div>
+
+      <!-- 20 الخلاصة -->
+      <h2 class="text-2xl font-bold text-drive-dark mt-12 mb-4"><span class="text-drive-primary">20 · </span>الخلاصة</h2>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">إضافة خدمة غسيل السيارات إلى فروع Drive7 يمكن أن تكون فرصة مهمة إذا صُممت بطريقة صحيحة. فهي ليست مجرد خدمة غسيل، بل قناة متكررة لإعادة العملاء إلى الفروع، وتعريفهم بخدمات الشركة، وبيع منتجات مرتبطة بالعناية بالسيارة.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لكن نجاح هذه الفكرة يعتمد على تأسيس نموذج تشغيلي دقيق، يوازن بين السرعة والجودة والتكلفة، ويمنع الخدوش، ويحافظ على انسيابية المسار، ويستهدف الشريحة المناسبة.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">لذلك يجب عدم البدء بطريقة عشوائية، لأن التشغيل غير المدروس قد يؤدي إلى تأخير السيارات، وارتفاع التكلفة، وانخفاض الجودة، وربما التأثير السلبي على سمعة Drive7.</p>
+      <p class="text-base leading-relaxed text-[#3d3a35] mb-4">الخطوة الصحيحة هي دراسة الفكرة بعمق، وتصميم المسار والإجراءات، واختيار المعدات والمواد المناسبة، وتعيين شخص تأسيسي قادر على بناء العملية من البداية، ثم إطلاق الخدمة تجريبيًا وتحسينها قبل التوسع.</p>
+
+      <!-- الملخص التنفيذي -->
+      <div class="mt-12 p-8 sm:p-10 bg-drive-dark rounded-2xl shadow-xl">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-2.5 h-2.5 rounded-sm bg-drive-primary inline-block"></span>
+          <span class="text-xl sm:text-2xl font-bold text-[#fdfbf7]">الملخص التنفيذي</span>
+        </div>
+        <ol class="list-decimal list-inside pr-2 text-sm sm:text-base leading-loose text-drive-light-text space-y-2 marker:text-drive-primary marker:font-bold">
+          <li>الهدف من خدمة الغسيل هو زيادة تكرار زيارة العملاء لفروع Drive7.</li>
+          <li>الخدمة تساعد على تعريف العملاء بخدمات Drive7 وتصحيح بعض التصورات غير الدقيقة عن الشركة.</li>
+          <li>يمكن من خلال الخدمة بيع منتجات متكررة الاستخدام مرتبطة بالعناية بالسيارة.</li>
+          <li>التموضع المقترح هو: <span class="text-white font-semibold">غسيل خارجي سريع دون خدوش.</span></li>
+          <li>التركيز على الغسيل الخارجي فقط يقلل التكلفة والوقت والتعقيد التشغيلي.</li>
+          <li>النموذج المقترح يعتمد على مسار يلتف حول الفرع، مع مراحل تشغيل واضحة.</li>
+          <li>يجب أن تبدأ العملية بإزالة الأوساخ قبل لمس السيارة لتقليل احتمالية الخدوش.</li>
+          <li>يجب موازنة أزمنة مراحل الغسيل والتجفيف والمسح حتى لا يتعطل المسار.</li>
+          <li>اسم Blocks مناسب للمرحلة التجريبية لحماية سمعة Drive7 إلى حين نضج الخدمة.</li>
+          <li>التحديات الرئيسية تشمل عرض المنتجات دون تعطيل المسار، وتجفيف السيارة، والسيارات شديدة الاتساخ، وأوساخ حواف الأبواب، والسيارات الساخنة.</li>
+          <li>نظام المناشف النظيفة والمغلفة يمكن أن يعزز ثقة العميل ويخدم وعد «دون خدوش».</li>
+          <li>يجب دراسة المعدات والمواد والغسالات والمجففات وأجهزة التجفيف ولوحات التوجيه قبل الإطلاق.</li>
+          <li>يحتاج المشروع إلى شخص تأسيسي يفهم تصميم العمليات وLean وSix Sigma.</li>
+          <li>يجب إطلاق الخدمة تجريبيًا، وقياس الأداء، ثم تحسين النموذج قبل التوسع.</li>
+        </ol>
+      </div>
+      
+      <div class="mt-10 mb-4 text-center text-sm text-drive-secondary">— نهاية الدراسة —</div>
+    </div>
+  </div>
+</body>
+</html>
